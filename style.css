@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdowm-content {
+    background-color: aquamarine;
+    /* visibility: hidden; */
+    position: absolute;
+    display: none;
+}
+
+.dropdown:hover .dropdowm-content {
+    /* visibility: visible; */
+    display: block;
+}
+
+.tooltip {
+    position: relative;
+    border-bottom: 2px dotted black;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150px;
+    left: -50px;
+}
+
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+}
+
+.borderimg {
+    margin: 50px 50px 100px;
+    border: 10px solid transparent;
+    /* padding: 20px; */
+    border-image: url(/innovation.PNG) 20 stretch;
+    border-image-width: 15px;
+    border-image-outset: 4;
+}
+
+#lorem {
+    background-image: url(/innovation.PNG), url(/phone.PNG);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, repeat;
+    background-size: 200px 100px, 100px 150px;
+    background-origin: content-box;
+    padding: 50px;
+    color: white;
+}
